@@ -122,6 +122,54 @@ pub fn test_multiple_codes() {
 }
 
 #[test]
+pub fn test_wechat1() {
+    let file = "tests/images/wechat-test.jpg";
+    let img = image::open(file).unwrap();
+
+    //println!("img: {:?}", img);
+    let decoder = bardecoder::default_decoder_with_info();
+    let result = decoder.decode(&img);
+    println!("result: {:?}", result);
+    assert!(result[0].is_ok());
+}
+
+#[test]
+pub fn test_wechat2() {
+    let file = "tests/images/wechat-test2.jpg";
+    let img = image::open(file).unwrap();
+
+    //println!("img: {:?}", img);
+    let decoder = bardecoder::default_decoder_with_info();
+    let result = decoder.decode(&img);
+    println!("result: {:?}", result);
+    assert!(result[0].is_ok());
+}
+
+#[test]
+pub fn test_wechat3() {
+    let file = "tests/images/wechat-test3.jpg";
+    let img = image::open(file).unwrap();
+
+    //println!("img: {:?}", img);
+    let decoder = bardecoder::default_decoder_with_info();
+    let result = decoder.decode(&img);
+    println!("result: {:?}", result);
+    assert!(result[0].is_ok());
+}
+
+#[test]
+pub fn test_wechat4() {
+    let file = "tests/images/wechat2.jpg";
+    let img = image::open(file).unwrap();
+
+    //println!("img: {:?}", img);
+    let decoder = bardecoder::default_decoder_with_info();
+    let result = decoder.decode(&img);
+    println!("result: {:?}", result);
+    assert!(result[0].is_ok());
+}
+
+#[test]
 pub fn test_multiple_codes_with_info() {
     test_image_with_info(
         "tests/images/multiple_codes.png",
